@@ -1,0 +1,4 @@
+[{"eval":"__fx.seek(0.16)"},{"wait":300},{"shot":"shots/fx-std-a.png"},
+ {"eval":"__fx.seek(0.3)"},{"wait":300},{"shot":"shots/fx-std-b.png"},
+ {"eval":"__fx.seek(0.6)"},{"wait":300},{"shot":"shots/fx-std-c.png"},
+ {"eval":"__fx.seek(1.4)"},{"wait":300},{"shot":"shots/fx-std-d.png"}]

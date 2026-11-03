@@ -1,0 +1,4 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["../postfx.ts", "./*.ts", "../../src/render/postfx.ts", "../../src/render/postfx/*.ts"]
+}

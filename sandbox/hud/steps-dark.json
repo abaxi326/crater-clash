@@ -1,0 +1,6 @@
+[
+ {"wait": 3000},
+ {"eval": "__hud.auto(false); __hud.shield(1, 45); __hud.damage(0, 4)"},
+ {"wait": 700},
+ {"shot": "shots/hud-dark-low-1366.png"}
+]

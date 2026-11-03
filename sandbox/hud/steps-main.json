@@ -1,0 +1,15 @@
+[
+ {"wait": 2500},
+ {"eval": "__hud.auto(false); __hud.damage(1, 32)"},
+ {"wait": 250},
+ {"shot": "shots/hud-chip.png"},
+ {"eval": "__hud.picker(true)"},
+ {"wait": 900},
+ {"shot": "shots/hud-picker.png"},
+ {"eval": "__hud.picker(false); __hud.round(3)"},
+ {"wait": 700},
+ {"shot": "shots/hud-round.png"},
+ {"eval": "__hud.turn(0, -7.6)"},
+ {"wait": 450},
+ {"shot": "shots/hud-turn.png"}
+]

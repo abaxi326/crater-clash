@@ -1,0 +1,1 @@
+new Promise(r => { const t = setInterval(() => { if (window.__report) { clearInterval(t); r(Object.entries(window.__report).map(([k,v]) => k.padEnd(22) + ' pk ' + v.peak.toFixed(2) + ' rms ' + v.rmsDb.toFixed(1) + ' len ' + v.audible.toFixed(2) + (v.nan ? ' NAN' : '')).join('\n')); } }, 200); })

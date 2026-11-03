@@ -1,0 +1,12 @@
+[
+ {"wait": 3000},
+ {"eval": "__hud.auto(false); __hud.damage(0, 12)"},
+ {"wait": 300},
+ {"shot": "shots/hud-phone.png"},
+ {"eval": "__hud.picker(true)"},
+ {"wait": 900},
+ {"shot": "shots/hud-phone-picker.png"},
+ {"eval": "__hud.picker(false); __hud.turn(1, 9.2)"},
+ {"wait": 1600},
+ {"shot": "shots/hud-phone-cpu.png"}
+]

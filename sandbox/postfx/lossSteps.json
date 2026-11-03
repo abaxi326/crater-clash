@@ -1,0 +1,9 @@
+[
+  { "eval": "window.__ext = window.__pfx.panels[1].out.getContext('webgl2').getExtension('WEBGL_lose_context'); window.__ext.loseContext(); 'lost'" },
+  { "wait": 600 },
+  { "shot": "shots/postfx-lost.png" },
+  { "eval": "window.__ext.restoreContext(); 'restored'" },
+  { "wait": 1000 },
+  { "eval": "window.__pfx.panels[1].out.getContext('webgl2').isContextLost()" },
+  { "shot": "shots/postfx-restored.png" }
+]

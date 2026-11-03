@@ -1,0 +1,9 @@
+[
+ {"wait": 3000},
+ {"eval": "__hud.auto(false); __hud.damage(0, 6); __hud.crate(0, 'thunderhead'); __hud.state.tanks[0].fuel = 0; __hud.game.events.emit({type:'drive', player:0, moving:false})"},
+ {"wait": 500},
+ {"shot": "shots/hud-low-1366.png"},
+ {"eval": "__hud.damage(0, 30)"},
+ {"wait": 500},
+ {"shot": "shots/hud-shieldbreak-1366.png"}
+]

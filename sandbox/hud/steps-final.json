@@ -1,0 +1,9 @@
+[
+ {"wait": 3000},
+ {"eval": "__hud.auto(false); __hud.shield(0, 30); __hud.damage(0, 9); __hud.turn(1, -2.1)"},
+ {"wait": 1500},
+ {"shot": "shots/hud-cpu-1920.png"},
+ {"eval": "__hud.phase('intro'); __hud.round(3)"},
+ {"wait": 800},
+ {"shot": "shots/hud-intro-1920.png"}
+]

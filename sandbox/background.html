@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sandbox · background</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+      canvas { display: block; width: 100vw; height: 100vh; }
+      #thumbs { position: fixed; inset: 0; display: none; flex-wrap: wrap; align-items: flex-start; gap: 16px; padding: 24px; background: #0c0f18; align-content: flex-start; }
+      #thumbs canvas { width: auto; height: auto; border-radius: 12px; }
+      #hud { position: fixed; left: 8px; top: 6px; color: #fff; font: 12px system-ui; opacity: 0.7; text-shadow: 0 1px 2px #000; }
+    </style>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div id="thumbs"></div>
+    <div id="hud"></div>
+    <script type="module" src="./background.ts"></script>
+  </body>
+</html>

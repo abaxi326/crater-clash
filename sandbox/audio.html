@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sandbox · audio</title>
+    <style>
+      :root { --bg: #0b1020; --panel: rgba(255,255,255,0.05); --line: rgba(255,255,255,0.09); --txt: #dfe6f3; --dim: #8a96ad; --azure: #3fc1ff; --blaze: #ff7448; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: radial-gradient(1200px 700px at 20% -10%, #1c2a4a 0%, var(--bg) 60%); color: var(--txt); font: 13px/1.35 system-ui, 'DM Sans', sans-serif; min-height: 100vh; }
+      header { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+      h1 { margin: 0; font: 600 18px 'Outfit', system-ui; letter-spacing: 0.02em; }
+      h1 span { color: var(--azure); }
+      main { display: grid; grid-template-columns: 1fr 340px; gap: 14px; padding: 14px 18px; }
+      section { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px 12px; margin-bottom: 12px; }
+      h2 { margin: 0 0 8px; font: 600 11px system-ui; text-transform: uppercase; letter-spacing: 0.12em; color: var(--dim); }
+      .row { display: flex; flex-wrap: wrap; gap: 6px; }
+      button { appearance: none; border: 1px solid var(--line); background: rgba(255,255,255,0.06); color: var(--txt); padding: 6px 10px; border-radius: 8px; font: 500 12px system-ui; cursor: pointer; transition: transform .08s, background .15s, border-color .15s; }
+      button:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.2); }
+      button:active { transform: scale(0.96); }
+      button.on { background: rgba(63,193,255,0.22); border-color: var(--azure); }
+      button i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
+      #unlock { background: linear-gradient(180deg, #46c8ff, #1f8fd6); border: 0; font-weight: 700; padding: 8px 16px; }
+      #unlock.done { background: rgba(93,255,155,0.18); border: 1px solid #5dff9b; }
+      label { display: grid; grid-template-columns: 90px 1fr 44px; align-items: center; gap: 8px; margin: 4px 0; color: var(--dim); }
+      label output { color: var(--txt); text-align: right; font-variant-numeric: tabular-nums; }
+      input[type=range] { width: 100%; accent-color: var(--azure); }
+      #stats { font: 12px ui-monospace, Consolas, monospace; white-space: pre; color: #b9c6dd; min-height: 150px; }
+      canvas { width: 100%; height: 120px; display: block; border-radius: 8px; background: rgba(0,0,0,0.25); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Crater Clash <span>· Audio</span></h1>
+      <button id="unlock">Unlock audio</button>
+      <button id="runall">Run every API path</button>
+      <span id="msg" style="color: var(--dim)"></span>
+    </header>
+    <main>
+      <div id="left"></div>
+      <div id="right">
+        <section><h2>Mixer</h2><div id="mixer"></div></section>
+        <section><h2>Output peak</h2><canvas id="meter" width="640" height="240"></canvas></section>
+        <section><h2>Diagnostics</h2><div id="stats"></div></section>
+      </div>
+    </main>
+    <script type="module" src="./audio.ts"></script>
+  </body>
+</html>

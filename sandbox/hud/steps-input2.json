@@ -1,0 +1,21 @@
+[
+ {"wait": 2500},
+ {"eval": "__hud.auto(false); window.__mark = 1; 'ok'"},
+ {"key": "KeyD", "hold": 400},
+ {"wait": 100},
+ {"eval": "const t=__hud.state.tanks[0]; JSON.stringify({mark: window.__mark, fuel:t.fuel, move:t.moveDir})"},
+ {"key": "Tab"},
+ {"wait": 600},
+ {"eval": "JSON.stringify({mark: window.__mark, pickerOpen: __hud.hud.isWeaponPickerOpen(), focus: document.activeElement && document.activeElement.dataset.id})"},
+ {"key": "ArrowRight"},
+ {"key": "ArrowDown"},
+ {"eval": "JSON.stringify({focus: document.activeElement && document.activeElement.dataset.id, angle: __hud.state.tanks[0].angle})"},
+ {"shot": "shots/hud-picker-kbd.png"},
+ {"key": "Enter"},
+ {"wait": 300},
+ {"eval": "JSON.stringify({mark: window.__mark, pickerOpen: __hud.hud.isWeaponPickerOpen(), weapon: __hud.state.tanks[0].weapon, angle: __hud.state.tanks[0].angle})"},
+ {"key": "Space"},
+ {"eval": "JSON.stringify({phase: __hud.state.phase, ammo: __hud.state.tanks[0].ammo.burrower})"},
+ {"wait": 150},
+ {"shot": "shots/hud-fired.png"}
+]

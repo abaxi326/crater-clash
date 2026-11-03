@@ -1,0 +1,13 @@
+[
+  {"key": "ArrowDown"}, {"key": "ArrowRight"}, {"wait": 100},
+  {"eval": "document.activeElement.textContent"},
+  {"key": "Enter"}, {"wait": 600},
+  {"key": "Escape"}, {"wait": 600},
+  {"eval": "[__menus.current(), document.activeElement.textContent]"},
+  {"key": "ArrowLeft"}, {"key": "Enter"}, {"wait": 600},
+  {"eval": "[__menus.current(), document.activeElement.textContent]"},
+  {"key": "ArrowRight"}, {"wait": 100},
+  {"eval": "document.activeElement.textContent"},
+  {"key": "Tab"}, {"key": "Tab"}, {"wait": 100},
+  {"eval": "document.activeElement.className"}
+]
