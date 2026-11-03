@@ -1,0 +1,16 @@
+# Keep the build context to what the image needs: package files, config, index.html, public/ and src/.
+node_modules
+dist
+shots
+sandbox
+tests
+scripts
+test-results
+*.log
+.git
+.gitignore
+.dockerignore
+Dockerfile
+compose.yaml
+DESIGN.md
+README.md

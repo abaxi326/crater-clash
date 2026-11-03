@@ -1,0 +1,7 @@
+services:
+  game:
+    build: .
+    image: crater-clash
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -197,6 +197,8 @@ export class Hud implements HudApi {
       case 'fire':
         this.dock.onFire(e.player, e.power);
         this.toggleWeaponPicker(false);
+        // The turn ribbon would cover the shell's climb; get it out of the way.
+        this.banner.clear();
         break;
       case 'damage':
         if (e.amount > 0 || e.absorbed > 0) this.cards[e.target].hit(e.amount >= 25);

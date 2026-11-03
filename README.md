@@ -34,6 +34,25 @@ npm run dev        # http://127.0.0.1:5180
 | `npm run preview` | Serve the production build |
 | `npm test` | Simulation and terrain test suite (Node's built-in test runner) |
 
+## Run with Docker
+
+The image builds the game with Node, then serves the static files with nginx. You only need Docker for this, not Node.
+
+```sh
+docker compose up --build -d     # build and start: http://localhost:8080
+docker compose logs -f           # follow logs
+docker compose down              # stop and remove
+```
+
+Without Compose:
+
+```sh
+docker build -t crater-clash .
+docker run --rm -p 8080:80 crater-clash
+```
+
+To use another host port, change `8080` in `compose.yaml` or in the `-p` flag.
+
 ## Controls
 
 | Action | Keyboard | Mouse / touch |

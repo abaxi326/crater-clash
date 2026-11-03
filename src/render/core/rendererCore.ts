@@ -315,6 +315,15 @@ export class RendererCore implements RendererApi {
       this.fail('background.setBiome', e);
     }
     this.decor.build(biome, state.seed, state.terrain, [state.tanks[0].x, state.tanks[1].x], this.effective === 'low');
+    // Bake live + wreck tank sprites now so the killing blow doesn't hitch (optional module extra).
+    const warm = (this.tankRenderer as { warm?: (i: { team: TankDrawInfo['team']; biome: BiomeId }) => void }).warm;
+    if (warm) {
+      try {
+        for (const team of TEAMS) warm.call(this.tankRenderer, { team, biome: state.biome });
+      } catch (e) {
+        this.fail('tanks.warm', e);
+      }
+    }
     try {
       this.fx.clear();
     } catch (e) {
